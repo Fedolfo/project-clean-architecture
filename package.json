@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Fedolfo/project-clean-architecture/issues"
   },
-  "homepage": "https://github.com/Fedolfo/project-clean-architecture#readme"
+  "homepage": "https://github.com/Fedolfo/project-clean-architecture#readme",
+  "devDependencies": {
+    "git-commit-msg-linter": "^4.1.3"
+  }
 }
