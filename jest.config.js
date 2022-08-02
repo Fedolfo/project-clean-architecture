@@ -1,5 +1,4 @@
-export default {
-
+module.exports = {
   clearMocks: true,
 
   collectCoverage: true,
@@ -17,5 +16,4 @@ export default {
   transform: {
     '.+\\.ts$': 'ts-jest'
   }
-
 }
