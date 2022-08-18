@@ -67,51 +67,6 @@ const makeSut = (): SutTypes => {
 }
 
 describe('signUp Controller', () => {
-  it('Should return 400 if no name is provided', async () => {
-    const { sut } = makeSut()
-
-    const httpRequest = {
-      body: {
-        email: 'email@email.com',
-        password: 'any_password',
-        passwordConfirmation: 'any_password'
-      }
-    }
-
-    const httpResponse = await sut.handle(httpRequest)
-    expect(httpResponse).toEqual(badRequest(new MissingParamError('name')))
-  })
-
-  it('Should return 400 if no email is provided', async () => {
-    const { sut } = makeSut()
-
-    const httpRequest = {
-      body: {
-        name: 'my_name',
-        password: 'any_password',
-        passwordConfirmation: 'any_password'
-      }
-    }
-
-    const httpResponse = await sut.handle(httpRequest)
-    expect(httpResponse).toEqual(badRequest(new MissingParamError('email')))
-  })
-
-  it('Should return 400 if no password is provided', async () => {
-    const { sut } = makeSut()
-
-    const httpRequest = {
-      body: {
-        name: 'my_name',
-        email: 'email@email.com',
-        passwordConfirmation: 'any_password'
-      }
-    }
-
-    const httpResponse = await sut.handle(httpRequest)
-    expect(httpResponse).toEqual(badRequest(new MissingParamError('password')))
-  })
-
   it('Should return 400 if no password confirmation fails', async () => {
     const { sut } = makeSut()
 
@@ -125,21 +80,6 @@ describe('signUp Controller', () => {
     }
     const httpResponse = await sut.handle(httpRequest)
     expect(httpResponse).toEqual(badRequest(new InvalidParamError('passwordConfirmation')))
-  })
-
-  it('Should return 400 if no passwordConfirmation is provided', async () => {
-    const { sut } = makeSut()
-
-    const httpRequest = {
-      body: {
-        name: 'my_name',
-        email: 'email@email.com',
-        password: 'any_password'
-      }
-    }
-
-    const httpResponse = await sut.handle(httpRequest)
-    expect(httpResponse).toEqual(badRequest(new MissingParamError('passwordConfirmation')))
   })
 
   it('Should return 400 if in an invalid email is provided', async () => {
