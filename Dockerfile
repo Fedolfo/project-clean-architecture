@@ -1,13 +1,7 @@
 FROM node:16
 
-WORKDIR /usr/src/clean-node-api
+WORKDIR /usr/src/app
 
-COPY ./package.json .
+COPY package*.json ./
 
-RUN npm install --only=prod
-
-COPY ./dist ./dist
-
-EXPOSE 5000
-
-ENTRYPOINT ["npm", "start"]
+RUN npm set-script prepare '' &&  npm install --omit=dev
