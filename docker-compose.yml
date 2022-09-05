@@ -20,6 +20,7 @@ services:
     command: npm start
     volumes:
       - ./dist:/usr/src/app/dist
+      - ./package.json:/usr/src/app/package.json
     ports:
       - '5050:5050'
     depends_on:
