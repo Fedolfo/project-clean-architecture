@@ -123,5 +123,4 @@ describe('DbAddAccount usecase', () => {
     await sut.add(makeFakeAccountData())
     expect(loadSpy).toHaveBeenCalledWith('valid_email@email.com')
   })
-
 })
