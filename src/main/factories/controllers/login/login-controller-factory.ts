@@ -1,5 +1,5 @@
 import { MakeLoginValidation } from './login-validation-factory'
-import { LoginController } from '../../../../presentation/controllers/login/login-controller'
+import { LoginController } from '../../../../presentation/controllers/login/login/login-controller'
 import { Controller } from '../../../../presentation/protocols'
 import { MakeDbAuthentication } from '../../usecases/authentication/db-authentication-factory'
 import { MakeLogControllerDecorator } from '../../decorators/log-controller-decorator-factory'
