@@ -74,4 +74,8 @@ describe('Account Mongo Repository', () => {
       expect(account).toBeTruthy() // não sei o que fazer aqui, o insertedId retorna apenas o id
     })
   })
+
+  describe('LoadByToken()', () => {
+
+  })
 })
