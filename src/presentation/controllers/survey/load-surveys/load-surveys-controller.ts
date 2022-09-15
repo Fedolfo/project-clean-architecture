@@ -1,4 +1,5 @@
 import { Controller, HttpRequest, HttpResponse, LoadSurveys } from './load-surveys-controller-protocols'
+import { ok } from '../../../helpers/http/http-helper'
 
 export class LoadSurveysController implements Controller {
   private readonly loadSurveys: LoadSurveys
@@ -8,10 +9,7 @@ export class LoadSurveysController implements Controller {
   }
 
   async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
-    await this.loadSurveys.load()
-    return {
-      body: ['algo'],
-      statusCode: 200
-    }
+    const surveys = await this.loadSurveys.load()
+    return ok(surveys)
   }
 }
