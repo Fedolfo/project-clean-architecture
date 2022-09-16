@@ -4,7 +4,7 @@ import { SignUpController } from './signup-controller'
 import { ok, serverError, badRequest, forbidden } from '../../../helpers/http/http-helper'
 
 const makeFakeAccount = (): AccountModel => ({
-  id: 'valid_id',
+  _id: 'valid_id',
   name: 'valid_name',
   email: 'valid_email@email.com',
   password: 'valid_password'

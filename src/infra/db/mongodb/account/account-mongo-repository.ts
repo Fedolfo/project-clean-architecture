@@ -11,7 +11,7 @@ export class AccountMongoRepository implements AddAccountRepository, LoadAccount
     const accountCollection = await MongoHelper.getCollection('accounts')
     const result = await accountCollection.insertOne(accountData)
     const { insertedId, ...rest } = result
-    return Object.assign({}, rest, { id: insertedId }) as unknown as AccountModel
+    return Object.assign({}, rest, { _id: insertedId }) as unknown as AccountModel
   }
 
   async loadByEmail(email: string): Promise<AccountModel> {

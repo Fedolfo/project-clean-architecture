@@ -4,7 +4,7 @@ import { DbLoadAccountByToken } from './db-load-account-by-token'
 import { LoadAccountByTokenRepository } from '../../protocols/db/account/load-account-by-token-repository'
 
 const makeFakeAccount = (): AccountModel => ({
-  id: 'valid_id',
+  _id: 'valid_id',
   name: 'valid_name',
   email: 'valid_email@email.com',
   password: 'hashed_password'

@@ -4,7 +4,7 @@ import { AuthMiddleware } from './auth-middleware'
 import { LoadAccountByToken, HttpRequest, AccountModel } from './auth-middleware-protocols'
 
 const makeFakeAccount = (): AccountModel => ({
-  id: 'valid_id',
+  _id: 'valid_id',
   name: 'valid_name',
   email: 'valid_email@email.com',
   password: 'hashed_password'

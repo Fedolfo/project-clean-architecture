@@ -31,7 +31,7 @@ describe('Account Mongo Repository', () => {
         password: 'any_password'
       })
       expect(account).toBeTruthy()
-      expect(account.id).toBeTruthy()
+      expect(account._id).toBeTruthy()
     })
   })
 
